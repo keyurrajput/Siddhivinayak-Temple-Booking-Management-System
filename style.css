@@ -1,0 +1,241 @@
+/* Color Palette */
+:root {
+    --primary: #F97316;       /* Orange */
+    --primary-light: #FFEDD5; /* Light Orange */
+    --secondary: #7E22CE;     /* Purple */
+    --secondary-light: #F3E8FF; /* Light Purple */
+    --accent: #FBBF24;        /* Yellow */
+    --text-dark: #1E293B;     /* Slate-800 */
+    --text-medium: #64748B;   /* Slate-500 */
+    --text-light: #F8FAFC;    /* Slate-50 */
+    --background: #FFF7ED;    /* Orange-50 */
+    --success: #10B981;       /* Green */
+    --warning: #F59E0B;       /* Amber */
+    --error: #EF4444;         /* Red */
+}
+
+/* Main Container */
+.main {
+    background-color: var(--background);
+    color: var(--text-dark);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Headers */
+.main-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.sub-header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.5rem;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-gold {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, white, #FFFBEB);
+}
+
+.card-purple {
+    border-left: 4px solid var(--secondary);
+    background: linear-gradient(135deg, white, var(--secondary-light));
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.stButton>button:hover {
+    background-color: var(--secondary);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Messages */
+.success-msg {
+    color: white;
+    background: linear-gradient(135deg, var(--success), #34D399);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.warning-msg {
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--warning), #FCD34D);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-msg {
+    color: white;
+    background: linear-gradient(135deg, var(--error), #F87171);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* QR Code Container */
+.qr-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px dashed var(--primary);
+}
+
+/* Form Elements */
+.stTextInput>div>div>input, 
+.stDateInput>div>div>input, 
+.stSelectbox>div>div>select,
+.stTextArea>div>div>textarea {
+    border-radius: 8px;
+    border: 1px solid var(--primary-light);
+    padding: 8px 12px;
+}
+
+.stTextInput>div>div>input:focus, 
+.stDateInput>div>div>input:focus, 
+.stSelectbox>div>div>select:focus,
+.stTextArea>div>div>textarea:focus {
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* Sidebar */
+.css-1d391kg, .css-12oz5g7 {
+    background-color: #F3E5F5;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 1px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-light);
+    border-bottom: none;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary);
+    border-bottom: none;
+}
+
+/* Timeline Container for Orders */
+.timeline-container {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    left: -26px;
+    top: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--primary-light);
+    color: var(--text-medium);
+}
+
+/* Dashboard Stats */
+.stat-container {
+    background: linear-gradient(135deg, var(--primary-light), white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-medium);
+    margin-top: -0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 2rem;
+    }
+    
+    .sub-header {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+}
